@@ -10,12 +10,11 @@
       <div class="circle"></div>
       <header>
         <a href="#" class="logo"> <img src="images/logo.png" /></a>
-        <ul class="nav-hover">
+        <ul>
           <li><a href="Home.html" class="menu-btn">Home</a></li>
           <li><a href="menu.html" class="menu-btn">Menu</a></li>
           <li><a href="#">What's new</a></li>
           <li><a href="#">Contact</a></li>
-          
         </ul>
       </header>
       <div class="content">
@@ -37,19 +36,19 @@
         <li>
           <img
             src="images/thumb1.png"
-            onclick="imgSlider('img1.png');changeCircleColor('#017143')"
+            onclick="imgSlider(src);changeCircleColor('#017143', src)"
           />
         </li>
         <li>
           <img
             src="images/thumb2.png"
-            onclick="imgSlider('img2.png');changeCircleColor('#eb7495')"
+            onclick="imgSlider(src);changeCircleColor('#eb7495', src)"
           />
         </li>
         <li>
           <img
             src="images/thumb3.png"
-            onclick="imgSlider('img3.png');changeCircleColor('#d752b1')"
+            onclick="imgSlider(src);changeCircleColor('#d752b1', src)"
           />
         </li>
       </ul>
@@ -58,10 +57,15 @@
           <a href="#"><img src="images/facebook.png" /></a>
         </li>
         <li>
-          <a href="https://twitter.com/Tarunrathod_19?t=I5dAHzPbBHw-aefuZdtOfw&s=08"><img src="images/twitter.png" /></a>
+          <a
+            href="https://twitter.com/Tarunrathod_19?t=I5dAHzPbBHw-aefuZdtOfw&s=08"
+            ><img src="images/twitter.png"
+          /></a>
         </li>
         <li>
-          <a href="https://www.instagram.com/_.tarunnn.rathoddd._"><img src="images/instagram.png" /></a>
+          <a href="https://www.instagram.com/_.tarunnn.rathoddd._"
+            ><img src="images/instagram.png"
+          /></a>
         </li>
       </ul>
     </section>
@@ -69,7 +73,7 @@
       function imgSlider(anything) {
         document.querySelector(".starbucks").src = anything;
       }
-      function changeCircleColor(color) {
+      function changeCircleColor(color, src) {
         const circle = document.querySelector(".circle");
         circle.style.background = color;
       }
